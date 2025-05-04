@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Specialties | Rawaaha Perfume Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .logo-img {
+      height: 70px;
+      width: 80px;
+    }
+
+    .nav-link {
+      color: #444;
+      font-weight: 500;
+      margin-left: 20px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #d63384;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: #d63384;
+      font-weight: bold;
+      text-align: center;
+      margin: 40px 0 30px;
+    }
+
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(214, 51, 132, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(214, 51, 132, 0.2);
+    }
+
+    .card-img-top {
+      height: 230px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .card-title {
+      color: #d63384;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #555;
+      padding: 0 10px 10px;
+    }
+
+    .music-section {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 50px;
+    }
+
+    .clickable-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #d63384;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .clickable-img:hover {
+      transform: scale(1.1);
+    }
+
+    .footer {
+      background-color: #d63384;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <div>
+      <img src="image/logo Rawaaha-no.png" alt="Rawaaha Logo" class="logo-img" />
+    </div>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link active" href="specialties.html">Specialties</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <!-- Music Section -->
+  <div class="music-section">
+    <h2 class="section-title">Relax with Our Signature Tune</h2>
+    <p>Tap the image to play/pause background music while browsing!</p>
+    <img src="image/before editing -.jpg" class="clickable-img" alt="Play Music" onclick="toggleMusic()" />
+    <audio id="backgroundMusic">
+      <source src="song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+<!-- Main Content -->
+<main class="container py-5">
+
+  <h2 class="section-title">Best Seller Perfumes</h2>
+
+  <div class="row g-4 mb-5">
+
+    <!-- Bestseller 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="image/_after editing.png" class="card-img-top" alt="Royal Pink">
+        <div class="card-body">
+          <h5 class="card-title">Royal Pink</h5>
+          <p class="card-text">A signature scent with floral top notes and a soft woody finish — loved by perfume lovers worldwide.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bestseller 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="image/before editing -.jpg" class="card-img-top" alt="Oud Blend">
+        <div class="card-body">
+          <h5 class="card-title">Oud Blend</h5>
+          <p class="card-text">A bold fragrance blending aged oud and exotic spices, perfect for evening elegance and statement presence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bestseller 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="image/pixal-1.jpg" class="card-img-top" alt="Mystic Bouquet">
+        <div class="card-body">
+          <h5 class="card-title">Mystic Bouquet</h5>
+          <p class="card-text">Fresh jasmine, creamy vanilla, and powdery musk — this enchanting mix is a top favorite for all seasons.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  &copy; 2024 Rawaaha Perfume Store. All rights reserved.
+</footer>
+
+<!-- Music Script -->
+<script>
+  function toggleMusic() {
+    const music = document.getElementById('backgroundMusic');
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  }
+</script>
+
+</body>
+</html>
